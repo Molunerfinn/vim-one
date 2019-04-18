@@ -318,6 +318,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:special_grey = ['#3b4048', '16']
     let s:visual_grey  = ['#3e4452', '17']
     let s:pmenu        = ['#333841', '16']
+    let s:pmenu_fg     = ['#bcbcbc', '250']
+    let s:pmenu_sel    = ['#eeeeee', '255']
   else
     let s:mono_1 = ['#494b53', '23']
     let s:mono_2 = ['#696c77', '60']
@@ -375,8 +377,8 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   call <sid>X('ModeMsg',      s:syntax_fg,     '',               '')
   call <sid>X('MoreMsg',      s:syntax_fg,     '',               '')
   call <sid>X('NonText',      s:mono_3,        '',               'none')
-  call <sid>X('PMenu',        '',              s:pmenu,          '')
-  call <sid>X('PMenuSel',     '',              s:mono_4,         '')
+  call <sid>X('PMenu',        s:pmenu_fg,              s:pmenu,          '')
+  call <sid>X('PMenuSel',     s:pmenu_sel,              s:pmenu,         '')
   call <sid>X('PMenuSbar',    '',              s:syntax_bg,      '')
   call <sid>X('PMenuThumb',   '',              s:mono_1,         '')
   call <sid>X('Question',     s:hue_2,         '',               '')
